@@ -1,7 +1,5 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
-import torch
-import pickle
 import os
 from classes.handler import Handler
 from classes.authHandler import AuthHandler
@@ -13,9 +11,7 @@ from classes.genshinDataSet import GenshinDataSet
 from classes.config import Config
 from classes.request import Request
 from classes.response import Response
-from abc import ABC
-from typing import Dict
-import redis
+
 
 app = Flask(__name__)
 CORS(app)
@@ -41,6 +37,7 @@ data_prep_handler.set_next(ai_handler)
 @app.route('/api/classify', methods=['POST'])
 def classify_image():
     try:
+        print("Received request for classification.")
         token = request.headers.get('X-API-Key', '')
         payload = request.get_json()
         
@@ -52,9 +49,11 @@ def classify_image():
         
         # Start the chain
         response = auth_handler.handle(api_request)
+        print(f"Response after auth: {response.to_dict()}")
         return jsonify(response.to_dict())
     
     except Exception as e:
+        print(f"Error: {str(e)}")
         return jsonify({
             'success': False,
             'data': None,

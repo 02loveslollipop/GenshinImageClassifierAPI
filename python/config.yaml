@@ -1,0 +1,9 @@
+redis:
+  host: redis-14971.c263.us-east-1-2.ec2.redns.redis-cloud.com
+  port: 14971
+  username: default
+  db: 0
+  password: 5oU9YMEMfM20YRfMaeTj0Gz8Ndm9hiig
+
+settings:
+  window_minutes: 10

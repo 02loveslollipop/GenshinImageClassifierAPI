@@ -2,29 +2,30 @@ from classes.request import Request
 from classes.response import Response
 from classes.handler import Handler
 from typing import Optional, Dict, Any
-import redis 
+import redis
+from classes.config import Config
 
 class AuthHandler(Handler):
     def __init__(self):
         super().__init__()
-        # init Redis client
-        self.redis_client = redis.Redis(host='localhost', port=6379, db=0) 
+        config = Config()
+        self.redis_client = redis.Redis(
+            host=config['redis']['host'], 
+            port=config['redis']['port'],
+            decode_responses=True,
+            password=config['redis']['password']
+        )
     
-    def _validate_token(self, token: str) -> Optional[Dict[str, Any]]:
-        # Check if token exists in Redis
-        return self.redis_client.get(token) 
+    def _validate_token(self, token: str) -> bool:
+        # Check if API hash exists and is enabled
+        return self.redis_client.hget(token, "enabled") == "true"
     
     def handle(self, request: Request) -> Response:
-        # Check if token exists
         if not request.token:
             return Response(False, None, "Authentication token is required")
         
-        # Validate token
-        authResponse = self._validate_token(request.token)
+        if not self._validate_token(request.token):
+            return Response(False, None, "Invalid or disabled API key")
 
-        if not authResponse:
-            return Response(False, None, "Invalid or expired token")
-
-
-        print(f"Authentication successful for user with token: {request.token}")
+        print(f"Authentication successful for API key: {request.token}")
         return self.do_next(request)
