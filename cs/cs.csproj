@@ -8,6 +8,8 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.2" />
+    <PackageReference Include="Microsoft.NET.Runtime.Emscripten.3.1.12.Python.osx-x64" Version="7.0.20" />
+    <PackageReference Include="StackExchange.Redis" Version="2.8.31" />
   </ItemGroup>
 
 </Project>
