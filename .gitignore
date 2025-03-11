@@ -1,0 +1,11 @@
+#
+/.vscode
+*.code-workspace
+
+#cache files in python
+/python/__pycache__/
+/python/classes/__pycache__
+/python/interface/__pycache__
+
+#neural network files
+/python/models
