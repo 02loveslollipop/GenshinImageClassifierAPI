@@ -1348,7 +1348,7 @@
 											"top": 766,
 											"width": 275.96142578125,
 											"height": 13,
-											"text": "+nextHandler: IHandler",
+											"text": "-nextHandler: IHandler",
 											"horizontalAlignment": 0
 										},
 										{
@@ -1366,7 +1366,7 @@
 											"top": 781,
 											"width": 275.96142578125,
 											"height": 13,
-											"text": "+MongoClient",
+											"text": "-RedisClient: Redis",
 											"horizontalAlignment": 0
 										}
 									],
@@ -1402,7 +1402,7 @@
 											"top": 804,
 											"width": 275.96142578125,
 											"height": 13,
-											"text": "+AuthHandler(dbConnection: MongoClient)",
+											"text": "+AuthHandler(dbConnection: Redis)",
 											"horizontalAlignment": 0
 										},
 										{
@@ -1853,7 +1853,7 @@
 											"top": 1047,
 											"width": 79.70458984375,
 											"height": 13,
-											"text": "MongoClient"
+											"text": "Redis"
 										},
 										{
 											"_type": "LabelView",
@@ -1979,7 +1979,7 @@
 							"left": 1072,
 							"top": 1040,
 							"width": 88.70458984375,
-							"height": 48,
+							"height": 40,
 							"nameCompartment": {
 								"$ref": "AAAAAAGVgeA29h3nN14="
 							},
@@ -2119,7 +2119,7 @@
 											"top": 766,
 											"width": 278.11962890625,
 											"height": 13,
-											"text": "+nextHandler: IHandler",
+											"text": "-nextHandler: IHandler",
 											"horizontalAlignment": 0
 										},
 										{
@@ -2137,7 +2137,7 @@
 											"top": 781,
 											"width": 278.11962890625,
 											"height": 13,
-											"text": "+MongoClient",
+											"text": "-RedisClient: Redis",
 											"horizontalAlignment": 0
 										}
 									],
@@ -2173,7 +2173,7 @@
 											"top": 804,
 											"width": 278.11962890625,
 											"height": 13,
-											"text": "+RateLimitHandler(dbConnection: MongoClient)",
+											"text": "+RateLimitHandler(dbConnection: Redis)",
 											"horizontalAlignment": 0
 										},
 										{
@@ -2497,7 +2497,7 @@
 											"top": 702,
 											"width": 308.25830078125,
 											"height": 13,
-											"text": "+nextHandler: IHandler",
+											"text": "-nextHandler: IHandler",
 											"horizontalAlignment": 0
 										},
 										{
@@ -2515,7 +2515,7 @@
 											"top": 717,
 											"width": 308.25830078125,
 											"height": 13,
-											"text": "+MongoClient",
+											"text": "-MongoClient",
 											"horizontalAlignment": 0
 										}
 									],
@@ -2551,7 +2551,7 @@
 											"top": 740,
 											"width": 308.25830078125,
 											"height": 13,
-											"text": "+InputValidationHandler(dbConnection: MongoClient)",
+											"text": "+InputValidationHandler(dbConnection: Redis)",
 											"horizontalAlignment": 0
 										},
 										{
@@ -2800,7 +2800,7 @@
 											"top": 527,
 											"width": 308.25830078125,
 											"height": 13,
-											"text": "InputValidationHandler"
+											"text": "AiInferenceHandler"
 										},
 										{
 											"_type": "LabelView",
@@ -2876,7 +2876,7 @@
 											"top": 550,
 											"width": 308.25830078125,
 											"height": 13,
-											"text": "+nextHandler: IHandler",
+											"text": "-nextHandler: IHandler",
 											"horizontalAlignment": 0
 										},
 										{
@@ -2888,6 +2888,7 @@
 											"model": {
 												"$ref": "AAAAAAGVgeVirzdKk/I="
 											},
+											"visible": false,
 											"font": "Arial;13;0",
 											"parentStyle": true,
 											"left": 917,
@@ -2903,7 +2904,7 @@
 									"left": 912,
 									"top": 545,
 									"width": 318.25830078125,
-									"height": 38
+									"height": 23
 								},
 								{
 									"_type": "UMLOperationCompartmentView",
@@ -2927,10 +2928,10 @@
 											"font": "Arial;13;0",
 											"parentStyle": true,
 											"left": 917,
-											"top": 588,
+											"top": 573,
 											"width": 308.25830078125,
 											"height": 13,
-											"text": "+InputValidationHandler()",
+											"text": "+AiInferenceHandler()",
 											"horizontalAlignment": 0
 										},
 										{
@@ -2945,7 +2946,7 @@
 											"font": "Arial;13;0",
 											"parentStyle": true,
 											"left": 917,
-											"top": 603,
+											"top": 588,
 											"width": 308.25830078125,
 											"height": 13,
 											"text": "+SetNext(handler: IHandler)",
@@ -2963,7 +2964,7 @@
 											"font": "Arial;13;0",
 											"parentStyle": true,
 											"left": 917,
-											"top": 618,
+											"top": 603,
 											"width": 308.25830078125,
 											"height": 13,
 											"text": "+Handle(request: Request)",
@@ -2973,7 +2974,7 @@
 									"font": "Arial;13;0",
 									"parentStyle": true,
 									"left": 912,
-									"top": 583,
+									"top": 568,
 									"width": 318.25830078125,
 									"height": 53
 								},
@@ -3018,7 +3019,7 @@
 							"left": 912,
 							"top": 520,
 							"width": 317.25830078125,
-							"height": 116,
+							"height": 101,
 							"nameCompartment": {
 								"$ref": "AAAAAAGVgeVrrzdmCZM="
 							},
@@ -3225,7 +3226,7 @@
 									"font": "Arial;13;0",
 									"parentStyle": false,
 									"left": 1223,
-									"top": 655,
+									"top": 640,
 									"height": 13,
 									"alpha": 0.5235987755982988,
 									"distance": 30,
@@ -3247,7 +3248,7 @@
 									"font": "Arial;13;0",
 									"parentStyle": false,
 									"left": 1236,
-									"top": 658,
+									"top": 643,
 									"height": 13,
 									"alpha": 0.7853981633974483,
 									"distance": 40,
@@ -3268,7 +3269,7 @@
 									"font": "Arial;13;0",
 									"parentStyle": false,
 									"left": 1192,
-									"top": 651,
+									"top": 636,
 									"width": 7.22998046875,
 									"height": 13,
 									"alpha": -0.5235987755982988,
@@ -3382,7 +3383,7 @@
 							"tail": {
 								"$ref": "AAAAAAGVgeVrrzdlBTs="
 							},
-							"points": "1208:636;1208:1056;1161:1056",
+							"points": "1208:621;1208:1056;1161:1056",
 							"showVisibility": true,
 							"nameLabel": {
 								"$ref": "AAAAAAGVgerVNM6eYtE="
@@ -4736,6 +4737,7 @@
 								"$ref": "AAAAAAGVgb7AFA2puLo="
 							},
 							"name": "nextHandler",
+							"visibility": "private",
 							"type": {
 								"$ref": "AAAAAAGVga/L/fkX8JA="
 							}
@@ -4746,7 +4748,11 @@
 							"_parent": {
 								"$ref": "AAAAAAGVgb7AFA2puLo="
 							},
-							"name": "MongoClient"
+							"name": "RedisClient",
+							"visibility": "private",
+							"type": {
+								"$ref": "AAAAAAGVgeA29h3kAtY="
+							}
 						}
 					],
 					"operations": [
@@ -4821,7 +4827,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
-					"name": "MongoClient",
+					"name": "Redis",
 					"ownedElements": [
 						{
 							"_type": "UMLAssociation",
@@ -5084,6 +5090,7 @@
 								"$ref": "AAAAAAGVgeDqXCH1gxo="
 							},
 							"name": "nextHandler",
+							"visibility": "private",
 							"type": {
 								"$ref": "AAAAAAGVga/L/fkX8JA="
 							}
@@ -5094,8 +5101,11 @@
 							"_parent": {
 								"$ref": "AAAAAAGVgeDqXCH1gxo="
 							},
-							"name": "MongoClient",
-							"type": ""
+							"name": "RedisClient",
+							"visibility": "private",
+							"type": {
+								"$ref": "AAAAAAGVgeA29h3kAtY="
+							}
 						}
 					],
 					"operations": [
@@ -5325,6 +5335,7 @@
 								"$ref": "AAAAAAGVgeJIpid0ZGE="
 							},
 							"name": "nextHandler",
+							"visibility": "private",
 							"type": {
 								"$ref": "AAAAAAGVga/L/fkX8JA="
 							}
@@ -5336,6 +5347,7 @@
 								"$ref": "AAAAAAGVgeJIpid0ZGE="
 							},
 							"name": "MongoClient",
+							"visibility": "private",
 							"type": ""
 						}
 					],
@@ -5411,7 +5423,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
-					"name": "InputValidationHandler",
+					"name": "AiInferenceHandler",
 					"ownedElements": [
 						{
 							"_type": "UMLGeneralization",
@@ -5582,6 +5594,7 @@
 								"$ref": "AAAAAAGVgeVirzdC/Fk="
 							},
 							"name": "nextHandler",
+							"visibility": "private",
 							"type": {
 								"$ref": "AAAAAAGVga/L/fkX8JA="
 							}
@@ -5603,7 +5616,7 @@
 							"_parent": {
 								"$ref": "AAAAAAGVgeVirzdC/Fk="
 							},
-							"name": "InputValidationHandler"
+							"name": "AiInferenceHandler"
 						},
 						{
 							"_type": "UMLOperation",
